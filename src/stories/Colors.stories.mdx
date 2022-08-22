@@ -1,0 +1,30 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { theme } from "../theme/theme";
+
+<Meta title="Colors" />
+
+<ColorPalette>
+  <ColorItem
+    title="Gray"
+    subtitle="theme.color.gray[#]"
+    colors={{
+      "Gray 10": `${theme.color.gray[10]}`,
+      "Gray 20": `${theme.color.gray[20]}`,
+      "Gray 30": `${theme.color.gray[30]}`,
+      "Gray 40": `${theme.color.gray[40]}`,
+      "Gray 50": `${theme.color.gray[50]}`,
+      "Gray 60": `${theme.color.gray[60]}`,
+      "Gray 70": `${theme.color.gray[70]}`,
+    }}
+  />
+  <ColorItem
+    title="White"
+    subtitle="theme.color.white"
+    colors={{ White: `${theme.color.white}` }}
+  />
+  <ColorItem
+    title="Green"
+    subtitle="theme.color.green"
+    colors={{ White: `${theme.color.green}` }}
+  />
+</ColorPalette>
