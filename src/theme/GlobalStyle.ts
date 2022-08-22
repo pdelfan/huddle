@@ -19,7 +19,7 @@ html,
 body {
   margin: 0;
   background-color: ${theme.color.white};
-  font-family: 'Inter',-apple-system, sans-serif;
+  font-family: 'Inter',-apple-system, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
