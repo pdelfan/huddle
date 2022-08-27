@@ -1,7 +1,6 @@
 import { useAuth0 } from "@auth0/auth0-react";
-import { Navbar } from "../navbar/Navbar";
+import Navbar from "../navbar/Navbar";
 import { StyledLayout } from "./Layout.styled";
-import AvatarPlaceholder from "../../assets/avatarPlaceholder.png";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -9,12 +8,9 @@ interface LayoutProps {
 }
 
 function Layout({ children, title }: LayoutProps) {
-  const { user } = useAuth0();
-  const userPicture = user?.picture ? user.picture : AvatarPlaceholder;
-  
   return (
     <>
-      {user && <Navbar user={userPicture} title={title} />}
+      <Navbar title={title} />
       <StyledLayout>{children}</StyledLayout>
     </>
   );

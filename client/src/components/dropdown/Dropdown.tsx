@@ -1,18 +1,27 @@
-import { StyledDropdown, DropdownItem } from "./Dropdown.styled";
+import React from "react";
+import { StyledDropdown, Item } from "./Dropdown.styled";
+
+interface ItemProps {
+  children: React.ReactNode;
+  onClick?: () => void;
+}
+
+export function DropdownItem({ children, onClick }: ItemProps) {
+  return (
+    <Item tabIndex={0} onClick={onClick}>
+      {children}
+    </Item>
+  );
+}
 
 interface DropdownProps {
   isOpen: boolean;
+  children: React.ReactNode;
 }
 
-function Dropdown({ isOpen }: DropdownProps) {
+function Dropdown({ isOpen, children }: DropdownProps) {
   if (isOpen) {
-    return (
-      <StyledDropdown>
-        <DropdownItem tabIndex={0}>item</DropdownItem>
-        <DropdownItem tabIndex={0}>item</DropdownItem>
-        <DropdownItem tabIndex={0}>item</DropdownItem>
-      </StyledDropdown>
-    );
+    return <StyledDropdown>{children}</StyledDropdown>;
   } else {
     return null;
   }

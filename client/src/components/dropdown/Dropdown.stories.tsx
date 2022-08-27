@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { useState } from "react";
 import Button from "../button/Button";
-import Dropdown from "./Dropdown";
+import Dropdown, { DropdownItem } from "./Dropdown";
 import { DropdownParent } from "./Dropdown.styled";
 
 export default {
@@ -15,7 +15,11 @@ const Template: ComponentStory<typeof Dropdown> = (args) => {
   return (
     <DropdownParent>
       <Button text="Open dropdown" onClick={() => setIsOpen(!isOpen)} />
-      <Dropdown {...args} isOpen={isOpen} />
+      <Dropdown {...args} isOpen={isOpen}>
+        <DropdownItem>
+          <p>Item</p>
+        </DropdownItem>
+      </Dropdown>
     </DropdownParent>
   );
 };

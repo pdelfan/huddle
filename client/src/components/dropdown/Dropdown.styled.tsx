@@ -18,7 +18,7 @@ const appear = keyframes`
     }
 `;
 
-export const StyledDropdown = styled.div`
+export const StyledDropdown = styled.ul`
   position: absolute;
   background-color: ${theme.color.white};
   border: ${theme.border[1]};
@@ -32,10 +32,12 @@ export const StyledDropdown = styled.div`
   width: 8rem;
   box-shadow: ${theme.boxShadow[1]};
   animation: ${appear} 0.1s linear;
+  list-style:none ;  
 `;
 
-export const DropdownItem = styled.div`
+export const Item = styled.li`
   padding: ${theme.spacing[8]} ${theme.spacing[8]};
+  user-select:none ;
   &:hover,
   &:focus {
     background-color: ${theme.color.gray[10]};
