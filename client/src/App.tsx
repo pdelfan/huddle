@@ -1,8 +1,8 @@
-import { useAuth0 } from "@auth0/auth0-react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "./auth/protected-route";
 import Home from "./pages/Home/Home";
 import Library from "./pages/Library/Library";
+import Space from "./pages/Space/Space";
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
           path="/library"
           element={<ProtectedRoute component={Library} />}
         />
+        <Route path="/space" element={<ProtectedRoute component={Space} />} />
       </Routes>
     </BrowserRouter>
   );

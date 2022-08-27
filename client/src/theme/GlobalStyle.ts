@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
 html,
 * {
   box-sizing: border-box;
+  overscroll-behavior-x: none;
 }
 
 body {
@@ -38,14 +39,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	outline: 0;
 }
 
-.wrap {
-  position: fixed;
-  background-color: red;
-}
 
 .trans {
   transform: translate(300px, 300px);
-  position: absolute;
-  background-color: aqua;
+  position: absolute;  
 }
 `;
