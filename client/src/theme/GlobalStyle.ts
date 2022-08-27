@@ -18,19 +18,10 @@ html,
 
 body {
   margin: 0;
-  background-color: ${theme.color.white};
+  background-color: ${theme.color.gray[10]};
   font-family: 'Inter',-apple-system, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-main {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: white;
 }
 
 div, span, applet, object, iframe,
